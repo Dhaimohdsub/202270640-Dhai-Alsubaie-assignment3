@@ -5,19 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Dhai Alsubaie - SWE Portfolio (Assignment 1)." />
   <title>Dhai Alsubaie | Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
+  <div id="top"></div>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Top bar -->
   <header class="topbar">
     <div class="container topbar__inner">
       <a class="brand" href="#top">Dhai Alsubaie</a>
 
+      <button class="menu-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+        Menu
+      </button>
 
-      <nav class="topnav" aria-label="Primary">
+      <nav class="topnav" id="navMenu" aria-label="Primary">
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#tools">Tools</a>
@@ -33,7 +36,6 @@
   </header>
 
   <main id="main" class="layout container">
-    <!-- Left profile card -->
     <aside class="profile">
       <div class="profile__card">
         <div class="profile__media">
@@ -58,16 +60,14 @@
       </div>
     </aside>
 
-    <!-- Right content -->
     <section class="content">
-      <!-- HERO -->
       <section class="hero">
         <h1 class="hero__title">
           SOFTWARE <span class="ghost">ENGINEER</span>
         </h1>
 
         <p class="hero__subtitle">
-          I’m Dhai Alsubaie, a SWE student passionate about practical systems, clean UI, and AI-powered solutions.
+          Explore my academic projects, technical skills, and contact information. Use the navigation menu to move between sections and learn more about my work.
         </p>
 
         <div class="stats">
@@ -86,23 +86,21 @@
         </div>
       </section>
 
-      <!-- PROJECTS -->
       <section class="block" id="projects">
         <div class="block__head">
           <h2 class="block__title">RECENT <span class="ghost">PROJECTS</span></h2>
-          <p class="block__desc">Academic projects demonstrating SWE fundamentals.</p>
+          <p class="block__desc">Academic projects demonstrating software engineering, database, and AI skills.</p>
         </div>
 
         <div class="project-list">
           <article class="project-item">
             <div class="project-item__thumb">
-              <img src="assets/images/project-coe292.png" alt="COE 292 project preview" />
+              <img src="assets/images/project-coe292.png" alt="AI Classification Project preview" />
             </div>
             <div class="project-item__main">
               <h3>AI Classification Project</h3>
               <p>
-                Implemented K-NN, SVM, and MLP on a real-world dataset using 5-fold stratified cross-validation and
-                evaluation metrics (accuracy, precision, recall, F1, confusion matrix).
+                Implemented K-NN, SVM, and MLP on a real-world dataset using 5-fold stratified cross-validation and evaluation metrics such as accuracy, precision, recall, F1-score, and confusion matrix.
               </p>
               <div class="tags">
                 <span class="tag">Python</span>
@@ -111,18 +109,17 @@
                 <span class="tag">Classification</span>
               </div>
             </div>
-            <a class="arrow" href="#" aria-label="COE 292 link placeholder">↗</a>
+            <a class="arrow" href="#top" aria-label="Return to top from AI Classification Project">↗</a>
           </article>
 
           <article class="project-item">
             <div class="project-item__thumb">
-              <img src="assets/images/project-ics321.png" alt="ICS321 project preview" />
+              <img src="assets/images/project-ics321.png" alt="Horse Racing Database System preview" />
             </div>
             <div class="project-item__main">
               <h3>Horse Racing Database System</h3>
               <p>
-                Built a MySQL-based system with admin/guest functions, advanced queries, a stored procedure for cascading
-                deletion, and a trigger to archive deleted horse records.
+                Built a MySQL-based system with admin and guest functions, advanced queries, a stored procedure for deleting related owner records, and a trigger to archive deleted horse data.
               </p>
               <div class="tags">
                 <span class="tag">MySQL</span>
@@ -131,18 +128,17 @@
                 <span class="tag">Triggers</span>
               </div>
             </div>
-            <a class="arrow" href="#" aria-label="ICS321 link placeholder">↗</a>
+            <a class="arrow" href="#top" aria-label="Return to top from Horse Racing Database System">↗</a>
           </article>
 
           <article class="project-item">
             <div class="project-item__thumb">
-              <img src="assets/images/project-swe316.png" alt="SWE 316 project preview" />
+              <img src="assets/images/project-swe316.png" alt="Term Schedule Visualization App preview" />
             </div>
             <div class="project-item__main">
               <h3>Term Schedule Visualization App</h3>
               <p>
-                Parsed a large Excel schedule, allowed CRN input and weekday selection, and drew the student route between
-                classes on a custom panel (no ready-made visualization components), including distance and summary stats.
+                Parsed a large Excel schedule, accepted CRN input and weekday selection, and drew the student route between classes on a custom panel, including distance travelled and summary statistics.
               </p>
               <div class="tags">
                 <span class="tag">Data Viz</span>
@@ -151,44 +147,42 @@
                 <span class="tag">Custom Drawing</span>
               </div>
             </div>
-            <a class="arrow" href="#" aria-label="SWE 316 link placeholder">↗</a>
+            <a class="arrow" href="#top" aria-label="Return to top from Term Schedule Visualization App">↗</a>
           </article>
         </div>
       </section>
 
-      <!-- EXPERIENCE -->
       <section class="block" id="experience">
         <div class="block__head">
           <h2 class="block__title">LEARNING <span class="ghost">PATH</span></h2>
-          <p class="block__desc">What I’m currently building and improving.</p>
+          <p class="block__desc">What I’m currently building and improving through academic work.</p>
         </div>
 
         <div class="cards">
           <div class="card">
             <h3>Web Foundations</h3>
-            <p class="muted">HTML, CSS (Grid/Flexbox), JavaScript (DOM + localStorage), responsive layouts.</p>
+            <p class="muted">HTML, CSS (Grid/Flexbox), JavaScript, responsive layouts, and front-end interaction.</p>
             <p class="muted small">2026 — Present</p>
           </div>
 
           <div class="card">
             <h3>Databases</h3>
-            <p class="muted">SQL queries, schema design, stored procedures, triggers, and data integrity constraints.</p>
+            <p class="muted">SQL queries, schema design, stored procedures, triggers, and relational data handling.</p>
             <p class="muted small">2025 — Present</p>
           </div>
 
           <div class="card">
             <h3>AI / ML</h3>
-            <p class="muted">Classification models (KNN, SVM, MLP), validation, hyperparameters, evaluation metrics.</p>
+            <p class="muted">Classification models, preprocessing, validation, hyperparameters, and model evaluation.</p>
             <p class="muted small">2024 — Present</p>
           </div>
         </div>
       </section>
 
-      <!-- TOOLS -->
       <section class="block" id="tools">
         <div class="block__head">
           <h2 class="block__title">TOOLS <span class="ghost">& STACK</span></h2>
-          <p class="block__desc">Tech I used across my coursework projects.</p>
+          <p class="block__desc">Technologies used across my coursework projects.</p>
         </div>
 
         <div class="tools">
@@ -199,14 +193,16 @@
           <div class="tool">Scikit-learn</div>
           <div class="tool">Jupyter</div>
           <div class="tool">HTML/CSS/JS</div>
-          <div class="tool">ChatGPT (AI Assistant)</div>
+          <div class="tool">ChatGPT</div>
         </div>
       </section>
 
-      <!-- CONTACT -->
       <section class="block" id="contact">
         <div class="block__head">
           <h2 class="block__title">LET’S WORK <span class="ghost">TOGETHER</span></h2>
+          <p class="block__desc">
+            You can browse my projects above or use the form below to send a message. This form is front-end only and demonstrates input validation.
+          </p>
           <p class="block__desc">
             Email: <a class="link" href="mailto:dhaialsubaie@gmail.com">dhaialsubaie@gmail.com</a>
           </p>
@@ -232,7 +228,7 @@
               <span class="error" id="messageError"></span>
             </label>
 
-            <div class="notice" id="formNotice" role="status" aria-live="polite"></div>
+            <p id="formNotice" class="notice" role="status" aria-live="polite"></p>
 
             <button class="btn" type="submit">Submit</button>
           </form>

@@ -5,6 +5,7 @@ const root = document.documentElement;
 function applyTheme(theme) {
   root.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
+
   if (themeToggle) {
     themeToggle.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
   }
@@ -22,22 +23,29 @@ if (themeToggle) {
 
 // ===== Greeting by Time of Day =====
 const greeting = document.getElementById("greeting");
+
 if (greeting) {
   const hour = new Date().getHours();
-
   let message = "Hello!";
-  if (hour >= 5 && hour < 12) message = "Good morning ☀️";
-  else if (hour >= 12 && hour < 18) message = "Good afternoon 🌤️";
-  else message = "Good evening 🌙";
+
+  if (hour >= 5 && hour < 12) {
+    message = "Good morning ☀️";
+  } else if (hour >= 12 && hour < 18) {
+    message = "Good afternoon 🌤️";
+  } else {
+    message = "Good evening 🌙";
+  }
 
   greeting.textContent = message;
 }
 
 // ===== Footer Year =====
 const yearEl = document.getElementById("year");
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
-// ===== Mobile Nav Toggle (SAFE) =====
+// ===== Mobile Nav Toggle =====
 const navToggle = document.getElementById("navToggle");
 const navMenu = document.getElementById("navMenu");
 
@@ -55,9 +63,9 @@ if (navToggle && navMenu) {
   });
 }
 
-// ===== Contact Form: validation + success message (SAFE) =====
+// ===== Contact Form Validation =====
 const form = document.getElementById("contactForm");
-const notice = document.getElementById("formNotice"); // optional
+const notice = document.getElementById("formNotice");
 
 if (form) {
   const nameInput = document.getElementById("name");
@@ -78,34 +86,41 @@ if (form) {
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (notice) notice.textContent = "";
+
+    if (notice) {
+      notice.textContent = "";
+    }
 
     let ok = true;
 
-    const nameVal = (nameInput?.value || "").trim();
-    const emailVal = (emailInput?.value || "").trim();
-    const msgVal = (messageInput?.value || "").trim();
+    const nameVal = nameInput.value.trim();
+    const emailVal = emailInput.value.trim();
+    const messageVal = messageInput.value.trim();
 
     if (nameVal.length < 2) {
       setError(nameError, "Please enter your name (at least 2 characters).");
       ok = false;
-    } else setError(nameError, "");
+    } else {
+      setError(nameError, "");
+    }
 
     if (!isValidEmail(emailVal)) {
       setError(emailError, "Please enter a valid email address.");
       ok = false;
-    } else setError(emailError, "");
+    } else {
+      setError(emailError, "");
+    }
 
-    if (msgVal.length < 10) {
+    if (messageVal.length < 10) {
       setError(messageError, "Message should be at least 10 characters.");
       ok = false;
-    } else setError(messageError, "");
+    } else {
+      setError(messageError, "");
+    }
 
     if (ok) {
       if (notice) {
-        notice.textContent = "✅ Message sent (demo). No backend connected.";
-      } else {
-        alert("✅ Message sent (demo). No backend connected.");
+        notice.textContent = "✅ Message sent successfully. This is a front-end demo form.";
       }
       form.reset();
     }
