@@ -10,6 +10,13 @@
 <body>
   <div id="top"></div>
 
+  <div id="welcomeOverlay" class="welcome-overlay">
+    <div class="welcome-overlay__content">
+      <h1 id="overlayTitle">Welcome ✨</h1>
+      <p id="overlayText">Loading your portfolio experience...</p>
+    </div>
+  </div>
+
   <header class="topbar">
     <div class="container topbar__inner">
       <a class="brand" href="#top">Dhai Alsubaie</a>
@@ -21,7 +28,7 @@
       <nav class="topnav" id="navMenu" aria-label="Primary">
         <a href="#guide">Guide</a>
         <a href="#projects">Projects</a>
-        <a href="#github">GitHub API</a>
+        <a href="#github">GitHub</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -51,7 +58,7 @@
           <div class="profile__links">
             <a class="chip" href="mailto:dhaialsubaie@gmail.com">Email</a>
             <a class="chip" href="#projects">Projects</a>
-            <a class="chip" href="#github">GitHub API</a>
+            <a class="chip" href="#github">GitHub</a>
             <a class="chip" href="#contact">Contact</a>
           </div>
         </div>
@@ -65,12 +72,12 @@
         </h1>
 
         <p class="hero__subtitle">
-          This portfolio demonstrates API integration, advanced JavaScript logic, user state management, and better user interaction.
+          This portfolio demonstrates advanced JavaScript logic, API integration, and user state management.
         </p>
 
         <div class="welcome-box card">
           <h3>Personal Welcome</h3>
-          <p class="muted">Enter your name and the website will remember it.</p>
+          <p class="muted">Save your name and the site will remember you.</p>
 
           <div class="welcome-controls">
             <input type="text" id="visitorName" placeholder="Enter your name" />
@@ -86,45 +93,37 @@
       <section class="block" id="guide">
         <div class="block__head">
           <h2 class="block__title">HOW TO <span class="ghost">USE THIS SITE</span></h2>
-          <p class="block__desc">Follow these steps to explore the website clearly and easily.</p>
+          <p class="block__desc">Follow these steps to explore the portfolio clearly.</p>
         </div>
 
         <div class="cards">
           <div class="card">
             <h3>Step 1</h3>
-            <p class="muted">
-              Start with the profile section to understand my background, major, and interests.
-            </p>
+            <p class="muted">Read the profile section to understand who I am and what I focus on.</p>
           </div>
 
           <div class="card">
             <h3>Step 2</h3>
-            <p class="muted">
-              Use the navigation menu to move between the main sections: Guide, Projects, GitHub API, and Contact.
-            </p>
+            <p class="muted">Use the Projects section to filter, sort, and explore project details dynamically.</p>
           </div>
 
           <div class="card">
             <h3>Step 3</h3>
-            <p class="muted">
-              In the Projects section, filter projects by category and sort them to explore the content dynamically.
-            </p>
+            <p class="muted">Open the GitHub Dashboard to load live repositories from the GitHub API.</p>
           </div>
 
           <div class="card">
             <h3>Step 4</h3>
-            <p class="muted">
-              In the GitHub section, load repositories from the GitHub API. Then use the Contact form below to test validation and feedback messages.
-            </p>
+            <p class="muted">Use the Contact form below and check the validation feedback messages.</p>
           </div>
         </div>
       </section>
 
       <section class="block" id="projects">
         <div class="block__head">
-          <h2 class="block__title">SMART <span class="ghost">PROJECTS</span></h2>
+          <h2 class="block__title">PROJECT <span class="ghost">EXPLORER</span></h2>
           <p class="block__desc">
-            This section uses filtering and sorting logic to display projects dynamically.
+            Filter projects by category, sort them, and reveal more details.
           </p>
         </div>
 
@@ -150,14 +149,14 @@
         </div>
 
         <div id="projectList" class="project-list"></div>
-        <p id="projectsEmpty" class="notice hidden">No projects found for the selected filter.</p>
+        <p id="projectsEmpty" class="notice hidden">No projects found for the selected options.</p>
       </section>
 
       <section class="block" id="github">
         <div class="block__head">
-          <h2 class="block__title">LIVE <span class="ghost">GITHUB REPOS</span></h2>
+          <h2 class="block__title">GITHUB <span class="ghost">DASHBOARD</span></h2>
           <p class="block__desc">
-            This section fetches public repositories dynamically using the GitHub API.
+            Load public repositories and see a live summary using the GitHub API.
           </p>
         </div>
 
@@ -166,11 +165,29 @@
             <label for="githubUsername">GitHub username</label>
             <div class="github-controls">
               <input type="text" id="githubUsername" value="Dhaimohdsub" />
-              <button class="btn" id="loadReposBtn" type="button">Load Repositories</button>
+              <button class="btn" id="loadReposBtn" type="button">Load Dashboard</button>
             </div>
           </div>
 
-          <p id="githubStatus" class="notice">Click "Load Repositories" to fetch live data.</p>
+          <p id="githubStatus" class="notice">Click "Load Dashboard" to fetch live GitHub data.</p>
+
+          <div class="dashboard-grid" id="githubSummary">
+            <div class="card summary-card">
+              <h3>Total Repositories</h3>
+              <p class="summary-number" id="repoCount">-</p>
+            </div>
+
+            <div class="card summary-card">
+              <h3>Top Language</h3>
+              <p class="summary-number" id="topLanguage">-</p>
+            </div>
+
+            <div class="card summary-card">
+              <h3>Latest Updated Repo</h3>
+              <p class="summary-number summary-text" id="latestRepo">-</p>
+            </div>
+          </div>
+
           <div id="repoList" class="repo-list"></div>
         </div>
       </section>
@@ -179,7 +196,7 @@
         <div class="block__head">
           <h2 class="block__title">CONTACT <span class="ghost">FORM</span></h2>
           <p class="block__desc">
-            Fill out the form below. Validation will guide you if any field is incomplete or incorrect.
+            Fill in the form below. Validation will guide you if any input is missing or invalid.
           </p>
         </div>
 
