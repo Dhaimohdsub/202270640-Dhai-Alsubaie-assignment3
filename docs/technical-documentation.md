@@ -1,68 +1,79 @@
-# Technical Documentation — Assignment 1
+# Technical Documentation — Assignment 3
 
-## Overview
-This project is a responsive personal portfolio website developed using HTML, CSS, and JavaScript. The goal of the website is to present personal information, selected academic projects, and a contact form as the foundation for a larger professional portfolio.
+## Project Overview
+This project is a responsive and interactive portfolio website developed using HTML, CSS, and JavaScript. It extends previous assignments by introducing advanced functionality such as API integration, state management, project filtering and sorting, and improved validation logic.
 
 ## Implemented Features
 
-### 1. Profile Section
-The profile section introduces the student using a photo, name, role, short biography, and quick links. This section is designed as a side card that remains visually important across the page layout.
+### 1. GitHub API Integration
+The website connects to the GitHub API and fetches public repositories dynamically based on the username entered by the user. The section shows:
+- repository name
+- description
+- primary language
+- star count
+- last updated date
 
-### 2. Projects Section
-The Projects section presents three academic projects. Each project card includes:
-- a project image
-- a project title
-- a short description
-- technology tags
+The feature also includes:
+- loading message
+- no results message
+- error handling if the request fails
 
-This section was built using structured HTML blocks and styled with CSS to keep a consistent card-based appearance.
+### 2. Project Filtering and Sorting
+A local JavaScript project array is used to render the Projects section dynamically. Users can:
+- filter projects by category
+- sort projects by year or alphabetically
 
-### 3. Contact Form
-The contact form includes three required fields:
-- Name
-- Email
-- Message
+This demonstrates multi-step logic and dynamic rendering.
 
-JavaScript validates user input before submission. If the input is invalid, an error message appears below the related field. If the input is valid, a success message is shown. The form is front-end only and does not connect to a backend service.
+### 3. Visitor Name State
+The website allows a visitor to enter a name and save it. The value is stored in `localStorage` and shown again after refreshing the page. A clear button removes the stored name.
 
 ### 4. Theme Toggle
-A dark/light theme toggle was implemented using JavaScript and CSS custom properties. When the user clicks the toggle button, the page theme changes and the selected preference is stored in `localStorage`, which keeps the preference after refreshing the page.
+The dark/light theme is managed using CSS custom properties and JavaScript. The chosen theme is stored in `localStorage`.
 
 ### 5. Greeting Message
-A time-based greeting is displayed on the profile image card. JavaScript reads the current local time and updates the text to show:
-- Good morning
-- Good afternoon
-- Good evening
+A time-based greeting is shown depending on the current local time.
 
-### 6. Responsive Navigation
-The portfolio includes a desktop navigation bar and a responsive mobile menu. On smaller screens, a Menu button appears and toggles the navigation links using JavaScript.
+### 6. Timer
+The site includes a timer that counts how many seconds the visitor has been on the page.
 
-### 7. Back to Top Anchor
-A working back-to-top link was implemented in the footer. A dedicated anchor target was added at the top of the page to ensure the button works correctly without unresolved HTML anchors.
+### 7. Contact Form Validation
+The contact form checks:
+- minimum length for name
+- valid email format
+- minimum length for message
+- checkbox confirmation
+
+Error messages appear below each invalid field, and a success message appears after valid submission.
+
+### 8. Responsive Navigation
+The site includes desktop navigation and a mobile menu button that toggles the navigation links on smaller screens.
+
+### 9. User Guidance
+A dedicated guide section was added to improve user experience. It gives step-by-step instructions explaining how to navigate the site, use the projects section, load GitHub repositories, and interact with the contact form.
 
 ## File Structure
 - `index.html`: main page structure
-- `css/styles.css`: layout, theme, spacing, responsive rules, and visual styling
-- `js/script.js`: theme toggle, greeting message, mobile menu, footer year, and form validation
-- `assets/images/`: profile and project images
-- `docs/`: supporting documentation files
+- `css/styles.css`: all styling, layout, and responsive behavior
+- `js/script.js`: all interactivity and dynamic logic
+- `assets/images/`: image files
+- `docs/`: documentation files
 
-## Responsive Design
-The website was designed to work across desktop, tablet, and mobile screens. Media queries were used to:
-- change the layout from two columns to one column on smaller screens
-- collapse the navigation into a mobile menu
-- resize cards and content blocks for better readability
-
-## How to Run the Project
-1. Download or clone the repository.
-2. Open the project folder in VS Code.
-3. Open `index.html` directly in the browser, or use Live Server.
+## Performance Notes
+- lightweight structure
+- no heavy frameworks
+- simple and efficient DOM updates
+- minimal API requests
+- responsive layout without external libraries
 
 ## Testing
-The website was tested by:
-- resizing the browser window
-- checking mobile layout in developer tools
-- testing the theme toggle
-- testing form validation messages
-- testing the mobile menu
-- testing section anchors and the back-to-top link
+The site was tested for:
+- navigation links
+- theme toggle persistence
+- visitor name persistence
+- project filtering and sorting
+- GitHub API loading and errors
+- mobile menu
+- contact form validation
+- responsiveness
+- back-to-top link

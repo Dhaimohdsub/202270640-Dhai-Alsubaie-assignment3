@@ -1,82 +1,50 @@
-# Assignment 2 — Dynamic Features & Data Handling (Personal Portfolio)
+# Assignment 3 — Advanced Functionality
 
-## 📌 Overview
-This project is an enhanced version of my personal portfolio website developed using HTML, CSS, and JavaScript.  
-The main goal of this assignment is to integrate dynamic features, handle user input, and improve user interaction through JavaScript.
+## Overview
+This project is an advanced version of my personal portfolio website built with HTML, CSS, and JavaScript. It extends Assignments 1 and 2 by adding API integration, advanced project filtering and sorting logic, user state management, and improved user interaction.
 
----
+## Features
 
-## 🚀 Features
+### API Integration
+- Fetches and displays public GitHub repositories using the GitHub API
+- Shows repository name, description, language, stars, and updated date
+- Includes loading, empty, and error states
 
-### 🔹 Dynamic Behavior
-- Greeting message changes based on time of day (morning, afternoon, evening)
-- Theme toggle (Dark / Light mode) using localStorage
+### Complex Logic
+- Dynamic project filtering by category
+- Project sorting by newest, oldest, or alphabetical order
+- Contact form with advanced validation rules
+- Site timer showing how long the visitor has been on the page
 
-### 🔹 User Interaction
-- Responsive navigation menu for mobile devices
-- Smooth scrolling between sections
-- Interactive UI elements with hover effects
+### State Management
+- Dark/light theme toggle using localStorage
+- Visitor name saved and remembered using localStorage
 
-### 🔹 Form Handling
-- Contact form validation:
-  - Name must be at least 2 characters
-  - Email must be valid
-  - Message must be at least 10 characters
-- Error messages displayed clearly
-- Success message shown after valid submission (demo)
+### User Experience
+- Responsive design for desktop and mobile
+- Mobile menu for smaller screens
+- Guide section for step-by-step navigation
+- Smooth scrolling and helpful user feedback
 
----
-
-## 💾 Data Handling
-- Theme preference is saved using **localStorage**
-- Form input is validated on the client side
-
----
-
-## 🎨 Design & Responsiveness
-- Fully responsive layout (desktop + mobile)
-- Mobile navigation menu implemented
-- Clean UI with modern design
-- Smooth transitions and visual feedback
-
----
-
-## 🛠️ Technologies Used
+## Technologies Used
 - HTML5
-- CSS3 (Flexbox, Grid, Responsive Design)
-- JavaScript (DOM Manipulation, Events, localStorage)
+- CSS3
+- JavaScript
+- GitHub API
+- localStorage
 
----
+## How to Run
+1. Clone or download the repository
+2. Open the project in VS Code
+3. Run `index.html` using Live Server
+4. Or open `index.html` directly in the browser
 
-## ▶️ How to Run the Project
+## AI Usage Summary
+AI was used to support planning, debugging, styling improvements, feature design, and documentation writing. More details are available in `docs/ai-usage-report.md`.
 
-### Option 1:
-Open `index.html` directly in your browser
+## Live Demo
+Add your GitHub Pages link here.
 
-### Option 2 (Recommended):
-Use Live Server in VS Code:
-1. Right-click `index.html`
-2. Select **Open with Live Server**
-
----
-
-## 🤖 AI Usage
-
-AI was used as a support tool during development for:
-- Debugging JavaScript errors
-- Improving UI structure and layout
-- Enhancing responsiveness and styling
-- Suggesting improvements for code organization
-
-All final code was reviewed, modified, and understood before submission.
-
----
-
-## 📎 Repository Link
-(https://github.com/Dhaimohdsub/202270640-Dhai-Alsubaie-assignment2.git)
-
----
-
-## 👩‍💻 Student Information
-**Name:** Dhai Alsubaie  
-**Major:** Software Engineering  
+## Student Information
+- Name: Dhai Alsubaie
+- Major: Software Engineering

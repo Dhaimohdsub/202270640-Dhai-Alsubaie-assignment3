@@ -3,14 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dhai Alsubaie - SWE Portfolio (Assignment 1)." />
-  <title>Dhai Alsubaie | Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Dhai Alsubaie - Assignment 3 Portfolio" />
+  <title>Dhai Alsubaie | Assignment 3</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-
 <body>
   <div id="top"></div>
-  <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="topbar">
     <div class="container topbar__inner">
@@ -21,9 +19,9 @@
       </button>
 
       <nav class="topnav" id="navMenu" aria-label="Primary">
+        <a href="#guide">Guide</a>
         <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#tools">Tools</a>
+        <a href="#github">GitHub API</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -35,7 +33,7 @@
     </div>
   </header>
 
-  <main id="main" class="layout container">
+  <main class="layout container">
     <aside class="profile">
       <div class="profile__card">
         <div class="profile__media">
@@ -46,15 +44,15 @@
         <div class="profile__body">
           <h2 class="profile__name">Dhai Alsubaie</h2>
           <p class="profile__role">Software Engineering Student</p>
-
           <p class="profile__bio">
             Building simple solutions to real problems — focused on web development, databases, and AI.
           </p>
 
           <div class="profile__links">
-            <a class="chip" href="mailto:dhaialsubaie@gmail.com" aria-label="Email">Email</a>
-            <a class="chip" href="#projects" aria-label="Go to projects">Projects</a>
-            <a class="chip" href="#contact" aria-label="Go to contact">Contact</a>
+            <a class="chip" href="mailto:dhaialsubaie@gmail.com">Email</a>
+            <a class="chip" href="#projects">Projects</a>
+            <a class="chip" href="#github">GitHub API</a>
+            <a class="chip" href="#contact">Contact</a>
           </div>
         </div>
       </div>
@@ -63,148 +61,125 @@
     <section class="content">
       <section class="hero">
         <h1 class="hero__title">
-          SOFTWARE <span class="ghost">ENGINEER</span>
+          ADVANCED <span class="ghost">FUNCTIONALITY</span>
         </h1>
 
         <p class="hero__subtitle">
-          Explore my academic projects, technical skills, and contact information. Use the navigation menu to move between sections and learn more about my work.
+          This portfolio demonstrates API integration, advanced JavaScript logic, user state management, and better user interaction.
         </p>
 
-        <div class="stats">
-          <div class="stat">
-            <div class="stat__num">03</div>
-            <div class="stat__label">Selected Projects</div>
+        <div class="welcome-box card">
+          <h3>Personal Welcome</h3>
+          <p class="muted">Enter your name and the website will remember it.</p>
+
+          <div class="welcome-controls">
+            <input type="text" id="visitorName" placeholder="Enter your name" />
+            <button class="btn" id="saveNameBtn" type="button">Save</button>
+            <button class="btn btn--ghost" id="clearNameBtn" type="button">Clear</button>
           </div>
-          <div class="stat">
-            <div class="stat__num">SWE</div>
-            <div class="stat__label">Major</div>
+
+          <p class="notice" id="welcomeMessage">Welcome, visitor!</p>
+          <p class="muted">Time on site: <span id="siteTimer">0</span> seconds</p>
+        </div>
+      </section>
+
+      <section class="block" id="guide">
+        <div class="block__head">
+          <h2 class="block__title">HOW TO <span class="ghost">USE THIS SITE</span></h2>
+          <p class="block__desc">Follow these steps to explore the website clearly and easily.</p>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Step 1</h3>
+            <p class="muted">
+              Start with the profile section to understand my background, major, and interests.
+            </p>
           </div>
-          <div class="stat">
-            <div class="stat__num">AI</div>
-            <div class="stat__label">Focus Area</div>
+
+          <div class="card">
+            <h3>Step 2</h3>
+            <p class="muted">
+              Use the navigation menu to move between the main sections: Guide, Projects, GitHub API, and Contact.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Step 3</h3>
+            <p class="muted">
+              In the Projects section, filter projects by category and sort them to explore the content dynamically.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Step 4</h3>
+            <p class="muted">
+              In the GitHub section, load repositories from the GitHub API. Then use the Contact form below to test validation and feedback messages.
+            </p>
           </div>
         </div>
       </section>
 
       <section class="block" id="projects">
         <div class="block__head">
-          <h2 class="block__title">RECENT <span class="ghost">PROJECTS</span></h2>
-          <p class="block__desc">Academic projects demonstrating software engineering, database, and AI skills.</p>
+          <h2 class="block__title">SMART <span class="ghost">PROJECTS</span></h2>
+          <p class="block__desc">
+            This section uses filtering and sorting logic to display projects dynamically.
+          </p>
         </div>
 
-        <div class="project-list">
-          <article class="project-item">
-            <div class="project-item__thumb">
-              <img src="assets/images/project-coe292.png" alt="AI Classification Project preview" />
-            </div>
-            <div class="project-item__main">
-              <h3>AI Classification Project</h3>
-              <p>
-                Implemented K-NN, SVM, and MLP on a real-world dataset using 5-fold stratified cross-validation and evaluation metrics such as accuracy, precision, recall, F1-score, and confusion matrix.
-              </p>
-              <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">Scikit-learn</span>
-                <span class="tag">MLP</span>
-                <span class="tag">Classification</span>
-              </div>
-            </div>
-            <a class="arrow" href="#top" aria-label="Return to top from AI Classification Project">↗</a>
-          </article>
+        <div class="controls card">
+          <div class="control-group">
+            <label for="filterCategory">Filter by category</label>
+            <select id="filterCategory">
+              <option value="all">All</option>
+              <option value="ai">AI</option>
+              <option value="database">Database</option>
+              <option value="web">Web</option>
+            </select>
+          </div>
 
-          <article class="project-item">
-            <div class="project-item__thumb">
-              <img src="assets/images/project-ics321.png" alt="Horse Racing Database System preview" />
-            </div>
-            <div class="project-item__main">
-              <h3>Horse Racing Database System</h3>
-              <p>
-                Built a MySQL-based system with admin and guest functions, advanced queries, a stored procedure for deleting related owner records, and a trigger to archive deleted horse data.
-              </p>
-              <div class="tags">
-                <span class="tag">MySQL</span>
-                <span class="tag">SQL</span>
-                <span class="tag">Procedures</span>
-                <span class="tag">Triggers</span>
-              </div>
-            </div>
-            <a class="arrow" href="#top" aria-label="Return to top from Horse Racing Database System">↗</a>
-          </article>
-
-          <article class="project-item">
-            <div class="project-item__thumb">
-              <img src="assets/images/project-swe316.png" alt="Term Schedule Visualization App preview" />
-            </div>
-            <div class="project-item__main">
-              <h3>Term Schedule Visualization App</h3>
-              <p>
-                Parsed a large Excel schedule, accepted CRN input and weekday selection, and drew the student route between classes on a custom panel, including distance travelled and summary statistics.
-              </p>
-              <div class="tags">
-                <span class="tag">Data Viz</span>
-                <span class="tag">Excel Parsing</span>
-                <span class="tag">OOP</span>
-                <span class="tag">Custom Drawing</span>
-              </div>
-            </div>
-            <a class="arrow" href="#top" aria-label="Return to top from Term Schedule Visualization App">↗</a>
-          </article>
+          <div class="control-group">
+            <label for="sortProjects">Sort projects</label>
+            <select id="sortProjects">
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+              <option value="az">A–Z</option>
+            </select>
+          </div>
         </div>
+
+        <div id="projectList" class="project-list"></div>
+        <p id="projectsEmpty" class="notice hidden">No projects found for the selected filter.</p>
       </section>
 
-      <section class="block" id="experience">
+      <section class="block" id="github">
         <div class="block__head">
-          <h2 class="block__title">LEARNING <span class="ghost">PATH</span></h2>
-          <p class="block__desc">What I’m currently building and improving through academic work.</p>
+          <h2 class="block__title">LIVE <span class="ghost">GITHUB REPOS</span></h2>
+          <p class="block__desc">
+            This section fetches public repositories dynamically using the GitHub API.
+          </p>
         </div>
 
-        <div class="cards">
-          <div class="card">
-            <h3>Web Foundations</h3>
-            <p class="muted">HTML, CSS (Grid/Flexbox), JavaScript, responsive layouts, and front-end interaction.</p>
-            <p class="muted small">2026 — Present</p>
+        <div class="card github-panel">
+          <div class="github-header">
+            <label for="githubUsername">GitHub username</label>
+            <div class="github-controls">
+              <input type="text" id="githubUsername" value="Dhaimohdsub" />
+              <button class="btn" id="loadReposBtn" type="button">Load Repositories</button>
+            </div>
           </div>
 
-          <div class="card">
-            <h3>Databases</h3>
-            <p class="muted">SQL queries, schema design, stored procedures, triggers, and relational data handling.</p>
-            <p class="muted small">2025 — Present</p>
-          </div>
-
-          <div class="card">
-            <h3>AI / ML</h3>
-            <p class="muted">Classification models, preprocessing, validation, hyperparameters, and model evaluation.</p>
-            <p class="muted small">2024 — Present</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="block" id="tools">
-        <div class="block__head">
-          <h2 class="block__title">TOOLS <span class="ghost">& STACK</span></h2>
-          <p class="block__desc">Technologies used across my coursework projects.</p>
-        </div>
-
-        <div class="tools">
-          <div class="tool">VS Code</div>
-          <div class="tool">Git & GitHub</div>
-          <div class="tool">MySQL</div>
-          <div class="tool">Python</div>
-          <div class="tool">Scikit-learn</div>
-          <div class="tool">Jupyter</div>
-          <div class="tool">HTML/CSS/JS</div>
-          <div class="tool">ChatGPT</div>
+          <p id="githubStatus" class="notice">Click "Load Repositories" to fetch live data.</p>
+          <div id="repoList" class="repo-list"></div>
         </div>
       </section>
 
       <section class="block" id="contact">
         <div class="block__head">
-          <h2 class="block__title">LET’S WORK <span class="ghost">TOGETHER</span></h2>
+          <h2 class="block__title">CONTACT <span class="ghost">FORM</span></h2>
           <p class="block__desc">
-            You can browse my projects above or use the form below to send a message. This form is front-end only and demonstrates input validation.
-          </p>
-          <p class="block__desc">
-            Email: <a class="link" href="mailto:dhaialsubaie@gmail.com">dhaialsubaie@gmail.com</a>
+            Fill out the form below. Validation will guide you if any field is incomplete or incorrect.
           </p>
         </div>
 
@@ -227,6 +202,12 @@
               <textarea name="message" id="message" rows="5" required></textarea>
               <span class="error" id="messageError"></span>
             </label>
+
+            <label class="checkbox-row">
+              <input type="checkbox" id="agreeCheck" />
+              <span>I confirm the information above is correct.</span>
+            </label>
+            <span class="error" id="agreeError"></span>
 
             <p id="formNotice" class="notice" role="status" aria-live="polite"></p>
 
