@@ -1,55 +1,84 @@
 # AI Usage Report — Assignment 3
 
-## Tools Used
-The main AI tool used in this assignment was ChatGPT.
+## AI Tools Used
+I used ChatGPT as a support tool during this assignment.
 
 ## How AI Was Used
 
-### 1. Planning the Advanced Features
-AI was used to choose features that match the assignment requirements, including:
-- GitHub API integration
+### 1. Planning and Ideas
+AI was used mainly to brainstorm ideas for advanced features that match the assignment requirements.
+
+Examples:
+- welcome overlay idea
 - project filtering and sorting
-- visitor name state management
-- advanced form validation
-- timer feature
+- improving the GitHub section
+- enhancing user experience
 
-### 2. Code Support
-AI helped generate and refine:
-- HTML structure for new sections
-- CSS for responsive layout and components
-- JavaScript logic for localStorage, filtering, sorting, API integration, and validation
+These ideas were then selected and implemented manually.
 
-### 3. Debugging
-AI was used to identify and fix issues such as:
-- missing element IDs
-- validation errors
-- navigation problems on mobile
-- API request handling and user-friendly error messages
+---
 
-### 4. Documentation
-AI supported the writing and improvement of:
-- README
+### 2. Debugging and Problem Solving
+AI helped me understand and fix issues during development, such as:
+- buttons not working due to missing IDs
+- JavaScript stopping بسبب errors
+- incorrect connections between HTML and JavaScript
+- improving mobile navigation behavior
+
+I tested and adjusted the solutions myself after understanding the problem.
+
+---
+
+### 3. Code Improvement
+AI was used to:
+- suggest cleaner structure for JavaScript
+- improve readability of the code
+- organize features into logical sections
+
+However, I modified the code to fit my project structure and requirements.
+
+---
+
+### 4. Documentation Support
+AI helped me structure the documentation and improve the clarity of explanations, especially in:
+- README.md
 - technical documentation
-- AI usage report
 
-## Benefits
-Using AI helped:
-- speed up implementation
-- improve clarity of structure
-- generate better UI ideas
-- debug problems faster
-- strengthen documentation
+All content was reviewed and adjusted to reflect my actual implementation.
 
-## Challenges and Limitations
-Some AI-generated code required manual adjustment to match the final HTML structure and assignment requirements. Testing was necessary to make sure the API, filters, sorting, and validation all worked correctly.
+---
+
+## Benefits of Using AI
+- Helped me understand problems faster
+- Provided ideas that match the assignment rubric
+- Improved my ability to organize code and features
+- Made debugging easier
+
+---
+
+## Challenges
+- Some suggestions did not directly fit my code and needed changes
+- I had to verify and test everything manually
+- Not all generated solutions worked immediately
+
+---
 
 ## Learning Outcomes
-Through using AI, I learned:
-- how to fetch data from a public API
-- how to render dynamic data in the DOM
-- how to manage user state with localStorage
-- how to build more advanced conditional logic with JavaScript
-- how to review AI-generated suggestions critically
+Through this assignment and using AI, I learned:
+- how to integrate an external API
+- how to manage state using localStorage
+- how to build interactive features step by step
+- how to debug JavaScript issues
+- how to connect different parts of a web application together
+
+---
 
 ## Responsible Use
-AI was used as a support tool for learning and development. All generated suggestions were reviewed, modified, and tested before use. The final project reflects my understanding and implementation decisions.
+AI was used only as a support tool.
+
+All features were:
+- implemented
+- tested
+- and modified by me
+
+I made sure I understood the code before using it, and I did not rely on AI without reviewing the results.
